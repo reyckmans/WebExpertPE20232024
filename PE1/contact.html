@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wildstep/contact.be</title>
+    <link rel="stylesheet" href="scss/main.scss">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://kit.fontawesome.com/20843c5c71.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="banner">
+    <div class="navbar">
+        <img src="assets/logoRobbePE.png" class="logo">
+        <ul>
+            <li><a href="Homepage.html">Home</a></li>
+            <li><a href="#sAboud_us">About us</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html">Login</a></li>
+
+        </ul>
+    </div>
+
+    <div class="container_c">
+        <form action="action_page.php">
+
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+            <label for="country">Country</label>
+            <select id="country" name="country">
+                <option value="belgium">Belgium</option>
+                <option value="netherlands">Netherlands</option>
+                <option value="usa">USA</option>
+            </select>
+
+            <label for="subject">Subject</label>
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+            <input type="submit" value="Submit">
+
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

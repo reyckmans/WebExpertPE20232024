@@ -1,0 +1,337 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500; }
+
+.banner {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../assets/Background.jpeg);
+  background-size: cover;
+  background-position: center; }
+
+.navbar {
+  width: 85%;
+  margin: auto;
+  padding: 35px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative; }
+  .navbar ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: uppercase; }
+  .navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0%;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s; }
+  .navbar ul li:hover::after {
+    width: 100%; }
+  .navbar .detailpagetext {
+    color: black; }
+
+.logo {
+  width: 100px;
+  cursor: pointer; }
+
+.content {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  color: #ffffff; }
+  .content h1 {
+    font-size: 70px;
+    margin-top: 80px; }
+  .content p {
+    margin: 20px auto;
+    font-weight: 150;
+    line-height: 25px; }
+
+.btn-benner {
+  width: 200px;
+  padding: 15px 0;
+  text-align: center;
+  margin: 20px 10px;
+  border-radius: 25px;
+  font-weight: bold;
+  border: 2px solid #009688;
+  background: transparent;
+  color: #ffffff;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden; }
+  .btn-benner span {
+    background: #009688;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s; }
+  .btn-benner:hover span {
+    width: 100%; }
+  .btn-benner:hover {
+    border: none; }
+
+/* section cards*/
+#scards {
+  width: 100%;
+  padding: 35px 0;
+  display: flex;
+  justify-content: center; }
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 25%;
+  margin: 20px; }
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); }
+
+.container {
+  padding: 2px 16px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; }
+
+.card-header {
+  width: 100%;
+  color: #009688;
+  font-weight: 500;
+  font-size: 30pt;
+  text-align: center; }
+
+.card-img {
+  width: 100%;
+  height: auto; }
+
+.btn-card {
+  width: 200px;
+  padding: 15px 0;
+  text-align: center;
+  margin: 20px 10px;
+  border-radius: 25px;
+  font-weight: bold;
+  border: 2px solid #009688;
+  background: transparent;
+  color: #009688;
+  cursor: pointer;
+  position: relative; }
+  .btn-card:hover {
+    background: #009688;
+    color: #ffffff; }
+
+.aboud_us_input {
+  padding: 70px 200px; }
+
+.about_us_text {
+  ont-family: Montserrat,sans-serif;
+  font-size: 15pt;
+  color: #565656; }
+
+.titel_Discover {
+  text-align: center;
+  padding: 45px 0px 0px 0px; }
+
+.h1_text {
+  color: #009688;
+  font-family: Montserrat,sans-serif;
+  font-size: 40pt; }
+
+footer {
+  text-align: center;
+  background-color: #009688; }
+  footer a {
+    padding: 40px 40px 0px 40px;
+    text-decoration: none;
+    color: #fff; }
+
+.h2_footer {
+  padding: 10px;
+  color: #fff; }
+
+.p_footer {
+  padding: 10px; }
+
+.fa-brands {
+  color: #fff;
+  font-size: 25pt;
+  margin: 10px; }
+
+/* Login page*/
+.container {
+  padding: 8% 0 0;
+  width: 365px;
+  margin: auto; }
+
+.form {
+  position: relative;
+  z-index: 1;
+  max-width: 350px;
+  margin: 0 auto 100px;
+  padding: 30px 45px 30px 45px;
+  background: #FFFFFF; }
+  .form h2 {
+    text-align: center;
+    color: #009688;
+    padding: 5px; }
+
+.form input {
+  font-family: "Roboto", sans-serif;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  outline: 0;
+  font-size: 15px;
+  text-align: center;
+  box-sizing: border-box;
+  background: #F5F5F5; }
+  .form input ::placeholder {
+    color: #90A4AE; }
+
+.form .btn {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  outline: 0;
+  border: 0;
+  width: 100%;
+  padding: 15px;
+  background: #009688;
+  color: #FAFAFA;
+  text-transform: uppercase;
+  border-radius: 25px; }
+
+.form .message {
+  color: #90A4AE;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  margin: 10px 0; }
+  .form .message a {
+    text-decoration: none;
+    color: #009688; }
+
+.form .register-form {
+  display: none; }
+
+/*Contact Page*/
+input[type=text], select, textarea {
+  width: 100%;
+  /* Full width */
+  padding: 12px;
+  /* Some padding */
+  border: 1px solid #ccc;
+  /* Gray border */
+  border-radius: 4px;
+  /* Rounded borders */
+  box-sizing: border-box;
+  /* Make sure that padding and width stays in place */
+  margin-top: 6px;
+  /* Add a top margin */
+  margin-bottom: 16px;
+  /* Bottom margin */
+  resize: vertical; }
+
+input[type=submit] {
+  background-color: #009688;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer; }
+
+input[type=submit]:hover {
+  background-color: #009688; }
+
+.container_c {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  width: 50vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center; }
+
+/*SHOP*/
+.scards_shop {
+  width: 100%;
+  padding: 35px 0;
+  display: flex;
+  justify-content: center; }
+
+.card_shop {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 25%;
+  margin: 20px;
+  background-color: white; }
+  .card_shop:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); }
+
+.container_shop {
+  padding: 2px 16px;
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap; }
+
+.card-header_shop {
+  width: 100%;
+  color: #009688;
+  font-weight: 500;
+  font-size: 30pt;
+  text-align: center; }
+
+.card-img_shop {
+  width: 100%;
+  height: auto; }
+
+.btn-card_shop {
+  width: 200px;
+  padding: 15px 0;
+  text-align: center;
+  margin: 20px 10px;
+  border-radius: 25px;
+  font-weight: bold;
+  border: 2px solid #009688;
+  background: transparent;
+  color: #009688;
+  cursor: pointer;
+  position: relative; }
+  .btn-card_shop:hover {
+    background: #009688;
+    color: #ffffff; }
+
+#body_shop {
+  background-color: #f2f2f2; }
+
+.fa-regular {
+  color: #009688;
+  font-size: 25pt;
+  margin: 0 auto;
+  margin-top: 25px; }
+
+
+/*detail page*/
+.card_shop_detail {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 25%;
+  background-color: white; }
