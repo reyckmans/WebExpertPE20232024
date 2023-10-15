@@ -7,6 +7,7 @@ $graycolor: #90A4AE;
 $grijsachtergrond: #f2f2f2;
 $zwart: #000000;
 $font-family: 'Roboto', sans-serif;
+$fontweightbold: bold;
 
 *{
   margin: 0;
@@ -95,7 +96,7 @@ $font-family: 'Roboto', sans-serif;
   text-align: center;
   margin: 20px 10px;
   border-radius: 25px;
-  font-weight: bold;
+  font-weight: $fontweightbold;
   border: 2px solid $blueSite;
   background: transparent;
   color: #ffffff;
@@ -170,7 +171,7 @@ $font-family: 'Roboto', sans-serif;
   text-align: center;
   margin: 20px 10px;
   border-radius: 25px;
-  font-weight: bold;
+  font-weight: $fontweightbold;
   border: 2px solid $blueSite;
   background: transparent;
   color: $blueSite;
@@ -395,7 +396,7 @@ input[type=submit]:hover {
   text-align: center;
   margin: 20px 10px;
   border-radius: 25px;
-  font-weight: bold;
+  font-weight: $fontweightbold;
   border: 2px solid $blueSite;
   background: transparent;
   color: $blueSite;
