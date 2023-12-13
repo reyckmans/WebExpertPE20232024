@@ -5,6 +5,7 @@ import shop from '@/Pages/shop.vue'
 import contact from '@/Pages/contact.vue'
 import login from '@/Pages/login.vue'
 import detailpage from '@/Pages/detailpage.vue'
+import winkeland from "@/Pages/winkeland.vue";
 
 
 const routes = [
@@ -39,6 +40,11 @@ const routes = [
         component: detailpage
         //component: () => import("./Pages/detailpage.vue"),
     },
+    {
+        path: "/winkelmand",
+        name: "winkelmand",
+        component: winkeland
+    }
     // Add more routes as needed
 ];
 
@@ -46,3 +52,5 @@ const router = createRouter({
     history: createWebHistory(),
     routes,
 });
+
+export default router;

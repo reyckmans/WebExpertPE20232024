@@ -1,28 +1,34 @@
 <script>
+
+import benner from "@/components/bennerHome.vue";
+import about from "@/Pages/about.vue";
+import About from "@/Pages/about.vue";
+
 export default {
-  name: "home"
+  name: "home",
+  data() {
+    return {
+      products: []
+    }
+  },
+  components: {
+    About,
+    benner
+  },
+
 }
 </script>
 
 <template>
-
-  <div class="content">
-    <h1>YOUR SNEAKER, YOUR STORY</h1>
-    <p>Koop je sneakers hier</p>
-    <div>
-      <a href="login.html">
-        <button class="btn-benner" type="button"><span></span>Login</button>
-      </a>
-      <button class="btn-benner" type="button"><span></span>Shop</button>
-    </div>
-  </div>
+  <benner/>
 
   <h1 class="titel_Discover h1_text">Discover our variety of Exclusive Products</h1>
+
   <section id="scards">
     <div class="card">
-      <img class="card-img" src="assets/J1.jpg" alt="Jordan 1 High">
+      <img class="card-img" src="src/assets/Jordan1LowTravis.jpg" alt="Jordan 1 High">
       <div class="container">
-        <h2 class="card-header">Jordan 1 High</h2>
+        <h2 class="card-header">Jordan 1 Low</h2>
         <a href="detailpage.html">
           <button class="btn-card">Koop Nu</button>
         </a>
@@ -30,7 +36,7 @@ export default {
     </div>
 
     <div class="card">
-      <img class="card-img" src="assets/Ybred.jpg" alt="Yeezy 350 V2">
+      <img class="card-img" src="src/assets/Ybred.jpg" alt="Yeezy 350 V2">
       <div class="container">
         <h2 class="card-header">Yeezy 350 V2</h2>
         <a href="detailpage.html">
@@ -40,7 +46,7 @@ export default {
     </div>
 
     <div class="card">
-      <img class="card-img" src="assets/Dpanda.png" alt="Nike Dunk Low">
+      <img class="card-img" src="src/assets/DunkJarritos.jpg" alt="Nike Dunk Low">
       <div class="container">
         <h2 class="card-header">Nike Dunk Low</h2>
         <a href="detailpage.html">
@@ -49,6 +55,8 @@ export default {
       </div>
     </div>
   </section>
+
+  <about/>
 
 </template>
 

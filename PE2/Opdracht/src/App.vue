@@ -1,21 +1,27 @@
-<script setup>
-import benner from "@/components/benner.vue";
+<script>
+import benner from "@/components/bennerHome.vue";
+import footer from "@/components/footer.vue";
 import SchoenLijst from "@/components/schoenLijst.vue";
 import navBar from "@/components/navBar.vue";
+
+export default{
+  components: {
+      benner,
+      footer,
+      navBar
+  }
+}
 
 </script>
 
 <template>
-  <div id="bennerid">
-    <navBar/>
-    <router-view></router-view>
-    <footer/>
-  </div>
+  <nav-bar/>
+  <router-view></router-view>
+  <footer/>
 
 </template>
 
 <style scoped>
-
 #bennerid {
   background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(assets/Background.jpeg);
   background-size: cover;
