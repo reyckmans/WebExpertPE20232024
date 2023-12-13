@@ -14,8 +14,8 @@ export default {
         <h1>YOUR SNEAKER, YOUR STORY</h1>
         <p>Koop je sneakers hier</p>
         <div>
-          <a href="login.html"><button class="btn-benner" type="button"><span></span>Login</button></a>
-          <button class="btn-benner" type="button"><span></span>Shop</button>
+          <router-link to="/login"><button class="btn-benner" type="button"><span></span>Login</button></router-link>
+          <router-link to="/shop"><button class="btn-benner" type="button"><span></span>Shop</button></router-link>
         </div>
       </div>
 

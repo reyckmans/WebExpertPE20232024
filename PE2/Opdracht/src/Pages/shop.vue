@@ -170,7 +170,7 @@ export default {
       <div class="filter">
         <!-- Filter dropdown voor merk -->
         <label for="merk" class="tekst_filter">Selecteer Merk:</label>
-        <select id="merk" v-model="geselecteerdMerk" @change="filterSchoenen">
+        <select id="merk" class="filterbox" v-model="geselecteerdMerk" @change="filterSchoenen">
           <option value="alle">Alle Merken</option>
           <option value="NIKE">NIKE</option>
           <option value="JORDAN">JORDAN</option>
@@ -180,7 +180,7 @@ export default {
       <div class="filter">
         <!-- Filter dropdown voor prijs -->
         <label for="prijs" class="tekst_filter">Selecteer Prijs:</label>
-        <select id="prijs" v-model="geselecteerdePrijs" @change="filterSchoenen">
+        <select id="prijs" class="filterbox" v-model="geselecteerdePrijs" @change="filterSchoenen">
           <option value="alle">Alle Prijzen</option>
           <option value="200-400">200-400</option>
           <option value="400-700">400-700</option>
@@ -251,6 +251,9 @@ export default {
   font-weight: bold;
 }
 
+.filterbox{
+  margin-top: 3%;
+}
 .main-producten {
   @include flex-between();
   width: 90%;
