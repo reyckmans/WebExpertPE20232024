@@ -1,7 +1,6 @@
 <script>
 
 import benner from "@/components/bennerHome.vue";
-import about from "@/Pages/about.vue";
 import About from "@/Pages/about.vue";
 
 export default {
@@ -55,6 +54,8 @@ export default {
       </div>
     </div>
   </section>
+
+
 
   <about/>
 

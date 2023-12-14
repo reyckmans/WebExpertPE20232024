@@ -1,12 +1,19 @@
 <script>
 import {useGebruikerStore} from "@/store/gebruiker";
-import {mapState} from "pinia";
+import {mapActions, mapState} from "pinia";
 
 export default {
   name: "navBar.vue",
   computed: {
     ...mapState(useGebruikerStore, ['items']),
+    ...mapState(useGebruikerStore, ['aangemeldeGebruiker'])
   },
+  methods: {
+    logout() {
+      this.gebruikerStore.logout(),
+      this.$router.push('/');
+    }
+  }
 }
 </script>
 
@@ -14,12 +21,25 @@ export default {
   <div class="navbar">
     <img src="../assets/logoRobbePE.png" class="logo">
     <ul>
-      <li><router-link to="/">Home</router-link></li>
-      <li><router-link to="/about">About us</router-link></li>
-      <li><router-link to="/shop">Shop</router-link></li>
-      <li><router-link to="/contact">Contact</router-link></li>
-      <li><router-link to="/login">Login</router-link></li>
-      <li><router-link to="/winkelmand">Winkelmand {{items.length}}</router-link></li>
+      <li>
+        <router-link to="/">Home</router-link>
+      </li>
+      <li>
+        <router-link to="/about">About us</router-link>
+      </li>
+      <li>
+        <router-link to="/shop">Shop</router-link>
+      </li>
+      <li>
+        <router-link to="/contact">Contact</router-link>
+      </li>
+      <li v-if="aangemeldeGebruiker === null">
+        <router-link to="/login">Login</router-link>
+      </li>
+      <li v-else><a @click="logout" type="button">Logout</a></li>
+      <li>
+        <router-link to="/winkelmand">Winkelmand {{ items.length }}</router-link>
+      </li>
     </ul>
   </div>
 </template>

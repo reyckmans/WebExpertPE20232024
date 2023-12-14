@@ -1,56 +1,3 @@
-<!-- <script>
-export default {
-  name: "winkeland"
-}
-</script>
-
-<template>
-
-  <div class="box">
-    <h1>WINKELMAND</h1>
-
-  </div>
-
-</template>
-
-<style scoped>
-@import 'src/style/_base.scss';
-
-.box{
-  background-color: aliceblue;
-  padding: 4% 0 4%;
-  width: 600px;
-  margin: auto;
-  text-align: center;
-
-}
-
-</style> -->
-
-<template>
-  <div class="cart-container">
-    <h1>Winkelmand</h1>
-    <div v-if="cart.length === 0" class="empty-cart">
-      Winkelmandje is leeg
-    </div>
-    <ul v-else>
-      <li v-for="(product, index) in cart" :key="index" class="cart-item">
-        <img :src="product.image" alt="Productafbeelding" class="product-image" />
-        <div class="product-details">
-          <span class="product-name">{{ product.name }}</span>
-          <span class="product-price">€{{ product.price.toFixed(2) }}</span>
-        </div>
-        <div class="product-actions">
-          <button @click="removeFromCart(index)" class="remove-button">Verwijderen</button>
-        </div>
-      </li>
-    </ul>
-    <div v-if="cart.length > 0" class="total">
-      Totaal: €{{ total.toFixed(2) }}
-    </div>
-  </div>
-</template>
-
 <script>
 export default {
   name: "Winkelmand",
@@ -75,6 +22,30 @@ export default {
   },
 };
 </script>
+
+<template>
+  <div class="cart-container">
+    <h1>Winkelmand</h1>
+    <div v-if="cart.length === 0" class="empty-cart">
+      Winkelmandje is leeg
+    </div>
+    <ul v-else>
+      <li v-for="(product, index) in cart" :key="index" class="cart-item">
+        <img :src="product.image" alt="Productafbeelding" class="product-image" />
+        <div class="product-details">
+          <span class="product-name">{{ product.name }}</span>
+          <span class="product-price">€{{ product.price.toFixed(2) }}</span>
+        </div>
+        <div class="product-actions">
+          <button @click="removeFromCart(index)" class="remove-button">Verwijderen</button>
+        </div>
+      </li>
+    </ul>
+    <div v-if="cart.length > 0" class="total">
+      Totaal: €{{ total.toFixed(2) }}
+    </div>
+  </div>
+</template>
 
 <style scoped>
 @import 'src/style/_base.scss';
